@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika&family=Arvo&family=Lato:wght@100;300&family=Lora:ital,wght@0,400;1,500&family=Montserrat:wght@200;500&family=Open+Sans:wght@300&family=Playfair+Display&family=Poppins:wght@200&family=Raleway:wght@200&display=swap');
+
+@font-face {
+    font-family: titulo;
+    src: url(../Abril_Fatface.otf);
+}
+
+//paleta
+$blue-yonder: #4D6BA1ff;
+$cadet-grey: #8C9CA2ff;
+$khaki-web: #C8B098ff;
+$spanish-pink: #FCC4C3ff;
+$tan-crayola: #CD9A6Fff;
+
+$celadon-blue: #0081a7ff;
+$maximum-blue-green: #00afb9ff;
+$light-yellow: #fdfcdcff;
+$peach-puff: #fed9b7ff;
+$bittersweet: #f07167ff;
+
+$gold-crayola: #EAC081ff;
+$brown-sugar: #C47144ff;
+$queen-pink: #DBCAD2ff;
+$pale-pink: #FCD4D4ff;
+$cadet-grey: #A1B0B3ff;
+
+
+body {
+    .navbar {
+        width: 100%;
+        background: none;
+        position: fixed;
+
+        .navbar-brand {
+            font-family: titulo;
+            color: $cadet-grey;
+            font-size: 30px;
+        }
+
+        .nav-link {
+            font-family: sans-serif;
+
+            &:hover {
+                border-bottom: solid 1px gray;
+            }
+        }
+    }
+
+    #home {
+        height: 650px;
+        background-color: $light-yellow;
+        background-image: url(../img/image-from-rawpixel-id-6241885-original.png);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: titulo;
+        color: $cadet-grey;
+        font-size: 45px;
+        text-align: center;
+    }
+
+
+    #aboutMe {
+        height: max-content;
+        background-color: $light-yellow;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+
+        .about {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: max-content;
+            align-items: center;
+            width: 95%;
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 650px;
+                margin-top: 2em;
+                padding: 2em;
+
+                h2 {
+                    font-family: titulo;
+                    color: $cadet-grey;
+                }
+
+                .nombre {
+                    font-size: 40px;
+                    font-family: titulo;
+                    margin-left: 3em;
+                    color: $cadet-grey;
+                }
+
+                p {
+                    font-family: 'Montserrat', sans-serif;
+                    text-align: justify;
+                    color: rgb(115, 112, 112);
+                }
+
+                .tech {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    margin-top: 1em;
+                    gap: 2em;
+
+                    p {
+                        width: 7em;
+                        text-align: center;
+                        padding: 1em;
+                        background-color: $cadet-grey;
+                        font-family: 'Montserrat', sans-serif;
+                        color: rgb(237, 237, 237);
+                        border-radius: 20px;
+
+                        &:hover {
+                            transform: scale(1.1);
+                            transition-duration: 1s;
+                        }
+                    }
+                }
+            }
+
+            .imagen {
+                height: 400px;
+                width: 90%;
+                background-image: url(../img/diego-ph-fIq0tET6llw-unsplash.jpg);
+                background-size: cover;
+                background-position: center;
+                margin-top: 15em;
+            }
+        }
+
+    }
+
+    #myProjects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: max-content;
+        background-color: $pale-pink;
+        padding: 1em;
+
+        h2 {
+            font-family: titulo;
+            font-size: 40px;
+            color: #fff;
+            margin-top: 1em;
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 2em;
+            gap: 2em;
+            padding: 2em;
+            
+
+            .pampa {
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                .projectImg {
+                    background-image: url(../img/robbi-firmansah-1Pt6K7AsZIA-unsplash.jpg);
+                    width: 20em;
+                    height: 20em;
+                    background-size: cover;
+                    background-position: center;
+                    border-radius: 10px;
+                }
+
+                .projectTit {
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 20px;
+                    text-align: center;
+                    padding: 1em;
+                }
+
+                .projectInfo {
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 18px;
+                    text-align: center;
+                    
+                }
+
+                button {
+                    width: 9em;
+                    text-align: center;
+                    padding: 0.5em;
+                    border-style: none;
+                    background-color: $cadet-grey;
+                    font-family: 'Montserrat', sans-serif;
+                    border-radius: 20px;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        transition-duration: 1s;
+                    }
+                }
+            }
+
+            .onFleek {
+                @extend .pampa;
+            }
+
+            .martina {
+                @extend .pampa;
+            }
+        }
+    }
+
+    footer {
+        height: 10em;
+        background-color: $tan-crayola;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .redes {
+            display: flex;
+            flex-direction: row;
+            gap: 1em;
+
+            .icon {
+                width: 2em;
+                height: 2em;
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 600px) {
+    body {
+  
+
+    #home {
+        height: 650px;
+        font-size: 60px;
+    }
+
+
+    #aboutMe {
+        height: max-content;
+        padding: 1em;
+
+        .about {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 0%;
+            height: max-content;
+            .info {
+                display: flex;
+                flex-direction: column;
+                width: 50%;               
+                height: max-content;
+                .nombre {
+                    margin-left: 2em;
+                }
+
+                .tech{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    margin-top: 1em;
+                    gap: 1em;
+
+                    p{
+                        width: 10em;
+                        text-align: center;
+                        padding: 1em;
+                    }
+                }
+            }
+
+            .imagen {
+                width: 45%;
+                height:600px;
+                margin-top: 0%;
+                margin-bottom: 1em;
+            }
+        }
+
+    }
+    #myProjects{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 650px;
+      
+        .projects{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 2em;
+            gap: 2em;
+            .pampa{
+                width: 25em;
+                height: 25em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .projectImg{
+                    
+                    width: 20em;
+                    height: 20em;
+                }
+            }
+            
+        }
+    }
+    
+}
+
+}
