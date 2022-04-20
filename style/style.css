@@ -4,6 +4,53 @@
   src: url(../Abril_Fatface.otf);
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-button {
+  width: 21px;
+  height: 21px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 91px none #ef0b0b;
+  border-radius: 38px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #ed9292;
+}
+
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 21px none #ffffff;
+  border-radius: 63px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+
+::-webkit-scrollbar-track:active {
+  background: #fbacac;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 body .navbar {
   width: 100%;
   background: none;
@@ -12,8 +59,9 @@ body .navbar {
 
 body .navbar .navbar-brand {
   font-family: titulo;
-  color: #A1B0B3ff;
+  color: #8C9CA2ff;
   font-size: 30px;
+  margin-left: 1em;
 }
 
 body .navbar .nav-link {
@@ -44,7 +92,7 @@ body #home {
       -ms-flex-pack: center;
           justify-content: center;
   font-family: titulo;
-  color: #A1B0B3ff;
+  color: #6d7f83;
   font-size: 45px;
   text-align: center;
 }
@@ -108,14 +156,17 @@ body #aboutMe .about .info {
 
 body #aboutMe .about .info h2 {
   font-family: titulo;
-  color: #A1B0B3ff;
+  color: #8C9CA2ff;
 }
 
 body #aboutMe .about .info .nombre {
   font-size: 40px;
   font-family: titulo;
   margin-left: 3em;
-  color: #A1B0B3ff;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FCD4D4ff), to(#6d7f83));
+  background: linear-gradient(to bottom right, #FCD4D4ff, #6d7f83);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 body #aboutMe .about .info p {
@@ -142,7 +193,7 @@ body #aboutMe .about .info .tech p {
   width: 7em;
   text-align: center;
   padding: 1em;
-  background-color: #A1B0B3ff;
+  background-color: #8C9CA2ff;
   font-family: 'Montserrat', sans-serif;
   color: #ededed;
   border-radius: 20px;
@@ -252,7 +303,7 @@ body #myProjects .projects .pampa button, body #myProjects .projects .onFleek bu
   text-align: center;
   padding: 0.5em;
   border-style: none;
-  background-color: #A1B0B3ff;
+  background-color: #8C9CA2ff;
   font-family: 'Montserrat', sans-serif;
   border-radius: 20px;
 }
@@ -296,6 +347,16 @@ body footer .redes {
 body footer .redes .icon {
   width: 2em;
   height: 2em;
+}
+
+#contact {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+#contact .mainContact {
+  height: 650px;
 }
 
 @media screen and (min-width: 600px) {

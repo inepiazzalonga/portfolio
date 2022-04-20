@@ -22,8 +22,54 @@ $gold-crayola: #EAC081ff;
 $brown-sugar: #C47144ff;
 $queen-pink: #DBCAD2ff;
 $pale-pink: #FCD4D4ff;
-$cadet-grey: #A1B0B3ff;
+$cadet-grey2: rgb(109, 127, 131);
 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+
+::-webkit-scrollbar-button {
+    width: 21px;
+    height: 21px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+    border: 91px none #ef0b0b;
+    border-radius: 38px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #ed9292;
+}
+
+::-webkit-scrollbar-track {
+    background: #666666;
+    border: 21px none #ffffff;
+    border-radius: 63px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #666666;
+}
+
+::-webkit-scrollbar-track:active {
+    background: #fbacac;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
 
 body {
     .navbar {
@@ -35,6 +81,7 @@ body {
             font-family: titulo;
             color: $cadet-grey;
             font-size: 30px;
+            margin-left: 1em;
         }
 
         .nav-link {
@@ -57,9 +104,10 @@ body {
         align-items: center;
         justify-content: center;
         font-family: titulo;
-        color: $cadet-grey;
+        color: $cadet-grey2;
         font-size: 45px;
         text-align: center;
+
     }
 
 
@@ -97,7 +145,11 @@ body {
                     font-size: 40px;
                     font-family: titulo;
                     margin-left: 3em;
-                    color: $cadet-grey;
+
+                    background: -webkit-linear-gradient(left top, $pale-pink, $cadet-grey2);
+                    background: linear-gradient(to bottom right, $pale-pink, $cadet-grey2);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
 
                 p {
@@ -166,7 +218,7 @@ body {
             margin-top: 2em;
             gap: 2em;
             padding: 2em;
-            
+
 
             .pampa {
                 width: 90%;
@@ -195,7 +247,7 @@ body {
                     font-family: 'Montserrat', sans-serif;
                     font-size: 18px;
                     text-align: center;
-                    
+
                 }
 
                 button {
@@ -246,88 +298,102 @@ body {
     }
 }
 
+#contact {
+    height: max-content;
+
+    .mainContact {
+        height: 650px;
+       
+    }
+}
+
 @media screen and (min-width: 600px) {
     body {
-  
-
-    #home {
-        height: 650px;
-        font-size: 60px;
-    }
 
 
-    #aboutMe {
-        height: max-content;
-        padding: 1em;
+        #home {
+            height: 650px;
+            font-size: 60px;
+        }
 
-        .about {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            margin-top: 0%;
+
+        #aboutMe {
             height: max-content;
-            .info {
+            padding: 1em;
+
+            .about {
                 display: flex;
-                flex-direction: column;
-                width: 50%;               
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 0%;
                 height: max-content;
-                .nombre {
-                    margin-left: 2em;
-                }
 
-                .tech{
+                .info {
                     display: flex;
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                    margin-top: 1em;
-                    gap: 1em;
+                    flex-direction: column;
+                    width: 50%;
+                    height: max-content;
 
-                    p{
-                        width: 10em;
-                        text-align: center;
-                        padding: 1em;
+                    .nombre {
+                        margin-left: 2em;
+                    }
+
+                    .tech {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        margin-top: 1em;
+                        gap: 1em;
+
+                        p {
+                            width: 10em;
+                            text-align: center;
+                            padding: 1em;
+                        }
                     }
                 }
-            }
 
-            .imagen {
-                width: 45%;
-                height:600px;
-                margin-top: 0%;
-                margin-bottom: 1em;
-            }
-        }
-
-    }
-    #myProjects{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 650px;
-      
-        .projects{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            margin-top: 2em;
-            gap: 2em;
-            .pampa{
-                width: 25em;
-                height: 25em;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                .projectImg{
-                    
-                    width: 20em;
-                    height: 20em;
+                .imagen {
+                    width: 45%;
+                    height: 600px;
+                    margin-top: 0%;
+                    margin-bottom: 1em;
                 }
             }
-            
+
         }
+
+        #myProjects {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 650px;
+
+            .projects {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                margin-top: 2em;
+                gap: 2em;
+
+                .pampa {
+                    width: 25em;
+                    height: 25em;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .projectImg {
+
+                        width: 20em;
+                        height: 20em;
+                    }
+                }
+
+            }
+        }
+
     }
-    
-}
 
 }
