@@ -228,7 +228,7 @@ body {
                 text-align: center;
 
                 .projectImg {
-                    background-image: url(../img/robbi-firmansah-1Pt6K7AsZIA-unsplash.jpg);
+                    background-image: url(../img/elpampa.png);
                     width: 20em;
                     height: 20em;
                     background-size: cover;
@@ -268,11 +268,11 @@ body {
 
             .onFleek {
                 @extend .pampa;
+                .projectImg{
+                    background-image: url(../img/onFleek.png)
+                }
             }
 
-            .martina {
-                @extend .pampa;
-            }
         }
     }
 
@@ -299,6 +299,10 @@ body {
 }
 
 #contact {
+    .navbar-contacto{
+        display: inline-block;
+        justify-content: center;
+    }
     height: max-content;
 
     .mainContact {
